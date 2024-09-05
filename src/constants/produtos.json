@@ -3,7 +3,9 @@
     "id": 1,
     "name": "Beligol",
     "desc": "Jude",
-    "value": "100.00",
+    "value": "120.00",
+    "category": "meia ofensivo",
+    "status": false,
     "image": "../../src/assets/beligol.jpg"
   },
   {
@@ -11,6 +13,35 @@
     "name": "Florian",
     "desc": "Writz",
     "value": "75.00",
+    "category": "Camisa dez",
+    "status": true,
     "image": "../../src/assets/florian.jpg"
+  },
+  {
+    "id": 3,
+    "name": "ViniJr",
+    "desc": "Vinicius Junior",
+    "value": "115.00",
+    "category": "Ponta esquerdo",
+    "status": true,
+    "image": "../../src/assets/vini.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Mbappe",
+    "desc": "Kyliam",
+    "value": "150.00",
+    "category": "Atacante",
+    "status": false,
+    "image": "../../src/assets/mbappe.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Haaland",
+    "desc": "The Viking",
+    "value": "115.00",
+    "category": "Nove puro",
+    "status": true,
+    "image": "../../src/assets/haaland.jpg"
   }
 ]
