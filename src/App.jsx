@@ -27,9 +27,9 @@ function App() {
   return (
     <>
     <div className={style.wrapBtns}>
-      <button onClick={() => setShow("prod")}>Produtos</button>
-      <button onClick={() => setShow("api")}>API</button>
-      <button onClick={() => setShow("map")}>Mapa</button>
+      <button  onClick={() => setShow("prod")}>Produtos</button>
+      <button  onClick={() => setShow("api")}>API</button>
+      <button  onClick={() => setShow("map")}>Mapa</button>
     </div>
     <div  className={style.wrapPage}>
       <h1>Exercícios de manutenção</h1>
