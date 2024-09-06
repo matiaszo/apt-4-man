@@ -36,7 +36,7 @@ function App() {
      {show === "prod" &&
         <>
           <h2>Showroom de produtos</h2>
-            <div>
+            <div className={style.cards}>
             {produtos.map((item) => {
               return(
                 <Card name={item.name} desc={item.desc} value={item.value} image={item.image} key={item.id} category={item.category} status={item.status}/>
