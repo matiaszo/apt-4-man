@@ -13,7 +13,6 @@ import { Marker } from 'react-leaflet'
 import { Popup } from 'react-leaflet'
 
 
-
 function App() {
   const [show, setShow] = useState("")  
   const [data, setData] = useState([])
