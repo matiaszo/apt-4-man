@@ -3,19 +3,22 @@ import { useState, useEffect } from 'react'
 import { api } from "./api/rmApi"
 import { Link } from 'react-router-dom'
 import style from './App.module.css'
+import Modal from './Modal.jsx'
 
 function Api(){
     const [data, setData] = useState([])
     const [page, setPage] = useState("")
     const [name, setName] = useState("")
     const [alert, setAlert] = useState(false)
+    const [modal, setModal] = useState()
+
 
     useEffect(() => {
         api.get(`/character/?page=${page}&name=${name}`).then((response) => {
           if(!response.data.results){
             setAlert(false)
           }else{
-            setAlert(true)
+            setAlert(true)  
           }
           setData(response.data.results)
         }).catch((error) => {
@@ -46,11 +49,14 @@ function Api(){
             </div>
             {alert? 
             <div className={style.rick}>
-            {data.map((item) => { 
+            {modal !== undefined && <Modal data={data[modal]} close={() => setModal()}/>}
+            {data.map((item, index) => { 
              return(
-              <div key={item.id}>
-                <ApiCard name={item.name} desc={item.species} value={item.gender} image={item.image} />
+                 <>
+                 <div onClick={() => setModal(index)} key={item.id}>
+                <ApiCard name={item.name} desc={item.species} value={item.gender} image={item.image}/>
               </div>
+              </>
               )
            })}
             </div>

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Produto(){
     return(
         <>
-            <div  className={style.wrapPage}>
+            <div className={style.wrapPage}>
       <h1>Produtos</h1>
 
     </div>
